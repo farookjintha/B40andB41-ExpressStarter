@@ -1,9 +1,18 @@
 const express = require('express');
 const userRoutes = require('./routes/users.routes');
 const productRoutes = require('./routes/products.routes');
-
+const db = require('./db/connect');
 const app = express();
+
 app.use(express.json());
+
+//Connecting DB
+db();
+
+
+app.get('/', (req, res) => {
+    res.send('Hello World');
+})
 
 app.use(userRoutes);
 app.use(productRoutes);
