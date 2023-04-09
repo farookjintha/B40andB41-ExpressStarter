@@ -22,7 +22,7 @@ router.get('/users/:userId', (req, res) => {
     try{
         Users.findById(req.params.userId).then((data) => {
             if(!data){ 
-                return res.status(200).send({message: 'No user found with the given ID'})
+                return res.status(404).send({message: 'No user found with the given ID'})
             }
             res.status(200).send({message: 'User has been retrieved successfully.', data: data})
         }).catch(error => {

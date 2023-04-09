@@ -20,9 +20,3 @@ const userSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Users', userSchema);
-
-// Mongoose Function for CRUD
-//To add a data -> Users.save();
-// To read data -> Users.find();
-// To update a data -> User.findByIdAndUpdate();
-// To delete a data -> User.deleteOne();
