@@ -11,5 +11,4 @@ router.post('/products', isAuth, isAdmin, addProduct);
 router.put('/products/:productId', isAuth, isAdmin, updateProduct);
 router.delete('/products/:productId', isAuth, isAdmin, deleteProduct);
 
-
 module.exports = router;

@@ -9,7 +9,6 @@ const authRoutes = require('./routes/auth.routes');
 const userRoutes = require('./routes/users.routes');
 const productRoutes = require('./routes/products.routes');
 
-
 const app = express();
 
 app.use(express.json());
@@ -17,7 +16,6 @@ app.use(cookieParser());
 
 //Connecting DB
 db();
-
 
 app.get('/', (req, res) => {
     res.send('Hello World');
