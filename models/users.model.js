@@ -22,6 +22,11 @@ const userSchema = new mongoose.Schema({
         unique: true,
         trim: true
     },
+    role: {
+        type: Number,
+        default: 2,
+        enum: [1, 2]
+    },
     address: {
         type: String,
         required: true,
@@ -30,3 +35,7 @@ const userSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Users', userSchema);
+
+
+// 1 -> Admin
+// 2 -> NormalUsers
